@@ -29,7 +29,7 @@ public class SmoothCameraPanToObject : MonoBehaviour
             if (distance > 2) // if outside of the deadzone lerp camera
                 transform.position = Vector3.Slerp(transform.position, new Vector3(target.position.x + xOffset, target.position.y, zOffset), Time.deltaTime * ((distance * distance) / 2)); // cameralerp, multiplies smoothing value by the distance for a exponential speed increase the further away the target is
             else if (distance > 0)
-                transform.position = Vector3.Slerp(transform.position, new Vector3(target.position.x + xOffset, target.position.y, zOffset), Time.deltaTime * distance); // resorts to slower lerping and easing into of the new position withing a certain range, for a better feeling lerp.
+                transform.position = Vector3.Slerp(transform.position, new Vector3(target.position.x + xOffset, target.position.y, zOffset), Time.deltaTime * distance); // resorts to slower lerping and easing into of the new position within a certain range, for a better feeling lerp.
         }
     }
 }
